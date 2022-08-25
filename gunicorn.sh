@@ -14,8 +14,8 @@ echo "migration done"
 
 cd /var/lib/jenkins/workspace/django-cicd/
 
-sudo cp -rf gunicorn.socket /etc/systemd/system
-sudo cp -rf gunicorn.service /etc/systemd/system
+sudo cp -rf gunicorn.socket /etc/systemd/system/
+sudo cp -rf gunicorn.service /etc/systemd/system/
 
 
 echo $PWD
@@ -27,6 +27,6 @@ sudo systemctl enable gunicorn
 
 echo "gunicorn has been started"
 
-sudo systemctl status gunicorn
 sudo systemctl restart gunicorn
 
+sudo systemctl status gunicorn
